@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 0 0% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    transition: background 0.5s ease-in-out;
+  }
+
+  /* Default theme (futuristic gradient) */
+  body.theme-default {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  }
+
+  /* Light theme */
+  body.theme-light {
+    background: linear-gradient(135deg, #87ceeb 0%, #add8e6 100%);
+  }
+
+  /* Dark theme */
+  body.theme-dark {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+
+  /* Sunrise theme */
+  body.theme-sunrise {
+    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 100%);
+  }
+
+  /* Forest theme */
+  body.theme-forest {
+    background: linear-gradient(135deg, #2e8b57 0%, #3cb371 100%);
+  }
+
+  /* Ocean theme */
+  body.theme-ocean {
+    background: linear-gradient(135deg, #0077be 0%, #00bfff 100%);
+  }
+
+  /* Aurora theme */
+  body.theme-aurora {
+    background: linear-gradient(135deg, #00c9ff 0%, #92fe9d 100%);
+  }
+
+  /* Card backgrounds for different themes */
+  .card-themed {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+  }
+
+  .theme-light .card-themed {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.7) 100%);
+  }
+
+  .theme-dark .card-themed {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.5) 100%);
+  }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    body {
+      padding: 0;
+      justify-content: flex-start;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  /* Mobile touch improvements */
+  @media (max-width: 768px) {
+    button,
+    input,
+    select,
+    textarea {
+      font-size: 16px;
+    }
+
+    button {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    h1 {
+      font-size: 1.75rem !important;
+      line-height: 1.2;
+    }
+
+    .text-6xl {
+      font-size: 3rem !important;
+    }
+
+    .text-2xl {
+      font-size: 1.25rem !important;
+    }
+
+    .text-xl {
+      font-size: 1.125rem !important;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .text-6xl {
+      font-size: 4rem !important;
+    }
+  }
+}

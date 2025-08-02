@@ -75,7 +75,7 @@ The application will be accessible at \`http://localhost:3000\`.
 - \`npm run type-check\` - Run TypeScript checks
 
 ## Deployment
-🚀 Live: https://weather-dashboard.vercel.app/
+🚀 Live: https://weather-dashboard-2025.vercel.app/
 
 
 ### Vercel (Recommended)
@@ -109,5 +109,3 @@ vercel --prod
 
 Built with ❤️ by Amit Kukreja
 # Production ready for deployment
-# Trigger Vercel deploy
-http://weather-dashboard-2025.vercel.app/
